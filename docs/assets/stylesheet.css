@@ -1,0 +1,328 @@
+body {
+    font-family: Roboto, Arial;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+a {
+    color: #4177f6;
+    text-decoration: none;
+}
+
+nav.themes {
+    background: rgba(0, 0, 0, .02);
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, .1);
+}
+
+nav.themes ul,
+section.icons ol {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+section.icons ol {
+    color: rgba(0, 0, 0, 0.6);
+    flex-wrap: wrap;
+    font-size: .9em;
+    margin: 2em;
+}
+
+nav.themes ul li {
+    background: rgba(0, 0, 0, .02);
+    width: 20%;
+}
+
+@media (min-width: 320px) {
+    nav.themes ul li {
+        font-size: .6em;
+    }
+}
+
+@media (min-width: 640px) {
+    nav.themes ul li {
+        font-size: 1em;
+    }
+}
+
+nav.themes ul li.active {
+    background: rgba(0, 0, 0, .05);
+}
+
+nav.themes ul li:hover,
+nav.themes ul li:focus {
+    background: rgba(0, 0, 0, .04);
+}
+
+nav.themes ul li a {
+    color: rgba(0, 0, 0, .87);
+    display: block;
+    flex: 1;
+    padding: 1em 0 0.6em;
+    transition: all .3s ease-in-out;
+}
+
+nav.themes ul li a::after {
+    background: #006aff;
+    content: '';
+    display: block;
+    height: 2px;
+    margin: auto;
+    margin-top: .2em;
+    transition: width .3s ease-in-out;
+    width: 0;
+}
+
+nav.themes ul li a:hover::after {
+    width: 6em;
+}
+
+nav.themes ul li.active a {
+    color: #4177f6;
+}
+
+nav.themes ul li i.inline-icon {
+    background-size: cover;
+    display: inline-block;
+    margin-top: -3px;
+    vertical-align: middle;
+}
+
+@media (min-width: 320px) {
+    nav.themes ul li i.inline-icon {
+        height: 12px;
+        width: 12px;
+    }
+}
+
+@media (min-width: 640px) {
+    nav.themes ul li i.inline-icon {
+        height: 24px;
+        width: 24px;
+    }
+}
+
+nav.themes ul li i.baseline {
+    background-image: url(icon-baseline-24px.svg);
+}
+
+nav.themes ul li.active i.baseline {
+    background-image: url(icon-baseline-24px-blue.svg);
+}
+
+nav.themes ul li i.outline {
+    background-image: url(icon-outline-24px.svg);
+}
+
+nav.themes ul li.active i.outline {
+    background-image: url(icon-outline-24px-blue.svg);
+}
+
+nav.themes ul li i.round {
+    background-image: url(icon-round-24px.svg);
+}
+
+nav.themes ul li.active i.round {
+    background-image: url(icon-round-24px-blue.svg);
+}
+
+nav.themes ul li i.twotone {
+    background-image: url(icon-twotone-24px.svg);
+}
+
+nav.themes ul li.active i.twotone {
+    background-image: url(icon-twotone-24px-blue.svg);
+}
+
+nav.themes ul li i.sharp {
+    background-image: url(icon-sharp-24px.svg);
+}
+
+nav.themes ul li.active i.sharp {
+    background-image: url(icon-sharp-24px-blue.svg);
+}
+
+main p {
+    color: rgba(0, 0, 0, .38);
+    margin: 1em;
+}
+
+@media (min-width: 320px) {
+    main p {
+        font-size: .75em;
+    }
+}
+
+@media (min-width: 640px) {
+    main p {
+        font-size: .9em;
+    }
+}
+
+section.usage-guide {
+    background: rgba(0, 0, 0, .02);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .05);
+    margin: 1em;
+    padding: .5em;
+}
+
+section.usage-guide details summary {
+    cursor: pointer;
+    /* Firefox */
+    list-style-type: none;
+}
+
+/* Chrome */
+section.usage-guide details summary::-webkit-details-marker {
+    display: none
+}
+
+section.usage-guide details summary::marker {
+    display: none;
+}
+
+section.usage-guide details summary::before {
+    content: '\e145';
+    font-family: 'Material Icons';
+    font-size: 1.1em;
+    margin-right: .5em;
+    vertical-align: middle;
+}
+
+section.usage-guide details[open] summary::before {
+    content: '\e15b';
+}
+
+section.usage-guide details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+section.usage-guide p {
+    font-size: .9em;
+    margin: .8em;
+}
+
+section.usage-guide pre {
+    color: rgba(0, 0, 0, .6);
+    font-family: 'Roboto Mono';
+    font-size: .9em;
+    margin: 1em 0 1em;
+    white-space: pre-wrap;
+}
+
+section.usage-guide code {
+    background: rgba(0, 0, 0, .02);
+    font-family: 'Roboto Mono';
+    font-size: .9em;
+    padding: .3em;
+}
+
+section.icons ol li p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (min-width: 320px) {
+    section.icons ol li {
+        width: 33%;
+    }
+
+    section.icons ol li p {
+        font-size: .8em;
+    }
+}
+
+@media (min-width: 640px) {
+    section.icons ol li {
+        width: 20%;
+    }
+}
+
+@media (min-width: 960px) {
+    section.icons ol li {
+        width: 12.5%;
+    }
+}
+
+section.icons ol i,
+footer i {
+    color: rgba(0, 0, 0, .87);
+    direction: ltr;
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    /* Support for all WebKit browsers */
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari & Chrome */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox */
+    -moz-font-feature-settings: 'liga=1';
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE */
+    font-feature-settings: 'liga';
+}
+
+section.icons ol i {
+    font-size: 48px;
+}
+
+section.icons ol.baseline i,
+footer i {
+    font-family: 'Material Icons';
+}
+
+section.icons ol.outline i {
+    font-family: 'Material Icons Outlined';
+}
+
+section.icons ol.round i {
+    font-family: 'Material Icons Round';
+}
+
+section.icons ol.twotone i {
+    font-family: 'Material Icons Two Tone';
+}
+
+section.icons ol.sharp i {
+    font-family: 'Material Icons Sharp';
+}
+
+footer {
+    background: rgba(0, 0, 0, .04);
+    box-shadow: 0 4px 2px 2px rgba(0, 0, 0, .1);
+    color: rgba(0, 0, 0, .4);
+    font-size: .95em;
+    margin: 0;
+    padding: .5em 1em;
+}
+
+footer p {
+    margin: .25em;
+}
+
+footer i {
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+footer i.love:before {
+    color: #de0101;
+    content: '\e87d';
+}

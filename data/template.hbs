@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="description" content="Up-to-date listing of Material Icons name & codepoints pulled out directly from upstream icon fonts">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+  <title>Material Icons: {{theme.title}}</title>
+  <meta itemprop="url" property="og:url" name="twitter:url" content="https://paulofreitas.dev/material-icons/">
+  <meta itemprop="name" property="og:title" name="twitter:title" content="Material Icons">
+  <meta itemprop="description" property="og:description" name="twitter:description" content="Up-to-date listing of Material Icons name & codepoints pulled out directly from upstream icon fonts">
+  <meta itemprop="image" property="og:image" name="twitter:image" content="https://paulofreitas.dev/material-icons/assets/card-preview.png">
+  <meta property="og:site_name" content="Material Icons">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="google-site-verification" content="EqBe3p-JSU9Wa1l3xSkIlbGtLFDSBPxqEdq-UDAqAwo">
+  <link rel="canonical" href="https://paulofreitas.dev/material-icons/">
+  <link rel="author" href="https://github.com/paulofreitas">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Roboto+Mono:400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp&display=swap" rel="stylesheet">
+  <link href="/material-icons/assets/stylesheet.css?{{timestamp}}" rel="stylesheet">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36081824-3"></script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+   gtag('config', 'UA-36081824-3');
+  </script>
+ </head>
+ <body>
+  <main>
+   <nav class="themes">
+    <ul>
+{{#themes}}
+     <li class="{{#active}}active{{/active}}">
+      <a href="{{resource}}" rel="alternate">
+       <i class="inline-icon {{name}}"></i>
+       {{title}}
+      </a>
+     </li>
+{{/themes}}
+    </ul>
+   </nav>
+   <p>
+    Last updated at: <time datetime="{{timestamp format='isoformat'}}">{{timestamp format='isoformat'}}</time>
+    (<span class="count">{{length theme.icons}}</span> glyphs available)
+   </p>
+   <section class="usage-guide">
+    <details>
+     <summary>Using this icon font</summary>
+     <p>
+      The easiest way to set up icon fonts for use in any web page is through <a href="https://fonts.google.com/" rel="noopener" target="_blank">Google Fonts</a>.
+      All you need to do is include a single line of HTML:
+     </p>
+     <pre>
+    &lt;link href="https://fonts.googleapis.com/icon?family={{quote theme.font_family}}" rel="stylesheet"&gt;</pre>
+     <p>
+      Similar to other Google fonts, the correct CSS will be served to activate the <code>{{theme.font_family}}</code> font family specific to the browser.
+     </p>
+     <p>
+      An additional CSS class will be declared called <code>{{theme.css_class}}</code>.
+      Any element that uses this class will have the correct CSS to render these icons from the web font.
+     </p>
+    </details>
+   </section>
+   <p>Hover an icon to view its Unicode codepoint (if available) or hover an icon partial ligature name to view its full name:</p>
+   <section class="icons">
+    <ol class="{{theme.name}}">
+{{#each theme.icons}}
+     <li>
+      <i title="{{codepoint}}">{{name}}</i>
+      <p title="{{name}}">{{name}}</p>
+     </li>
+{{/each}}
+    </ol>
+   </section>
+  </main>
+  <footer>
+   <p>
+    Made with <i class="love"></i> by <a href="https://github.com/paulofreitas" rel="noopener" target="_blank">Paulo Freitas</a>.
+   </p>
+   <p>
+    Did it helped you? Star <i>star_border</i> the <a href="https://github.com/paulofreitas/material-icons" rel="noopener" target="_blank">GitHub repository</a>.
+   </p>
+   <p>
+    Want to give back? Any donation is appreciated: <a href="https://liberapay.com/paulofreitas" rel="noreferrer" target="_blank">Liberapay</a> &middot; <a href="https://picpay.me/paulofreitass" rel="noreferrer" target="_blank">PicPay</a> &middot; <a href="https://www.blockchain.com/btc/payment_request?address=13v5TJ3XLA1gn6XdL9Z2mLpRJ4N13gaaW9&amount=0.00001&message=You+can+change+the+amount+in+the+URL" rel="noreferrer" target="_blank">Bitcoin</a> &middot; <a href="https://brave.com/pau337" rel="noreferrer" target="_blank">Brave Rewards</a>
+   </p>
+  </footer>
+ </body>
+<html>

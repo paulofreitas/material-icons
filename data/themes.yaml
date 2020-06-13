@@ -1,0 +1,25 @@
+- name: baseline
+  title: Filled
+  font_family: 'Material Icons'
+  css_class: '.material-icons'
+  resource: /material-icons/
+- name: outline
+  title: Outlined
+  font_family: 'Material Icons Outlined'
+  css_class: '.material-icons-outlined'
+  resource: /material-icons/outline
+- name: round
+  title: Rounded
+  font_family: 'Material Icons Round'
+  css_class: .material-icons-round
+  resource: /material-icons/round
+- name: twotone
+  title: Two-Tone
+  font_family: 'Material Icons Two Tone'
+  css_class: .material-icons-two-tone
+  resource: /material-icons/twotone
+- name: sharp
+  title: Sharp
+  font_family: 'Material Icons Sharp'
+  css_class: .material-icons-sharp
+  resource: /material-icons/sharp
